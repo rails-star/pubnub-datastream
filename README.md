@@ -49,7 +49,7 @@ subscribe_key: sub-c-xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
 publish_key: pub-c-yyyyyyy-yyyy-yyyyy-yyyy-yyyyyyyyyy
 ```
 
-We defined the class called [PubnubListener](https://github.com/denisbasyuk41/pubnub/blob/master/lib/pubnub_listener.rb) and [Notify](https://github.com/denisbasyuk41/pubnub/blob/master/lib/notifier.rb) for access the pubnub API. You can check this class in the github.	
+We defined the class called [PubnubListener](https://github.com/alexbily/pubnub/blob/master/lib/pubnub_listener.rb) and [Notify](https://github.com/alexbily/pubnub/blob/master/lib/notifier.rb) for access the pubnub API. You can check this class in the github.	
 
 ## Step 3: Write the Controller
 Now you need to create a controller, and define the methods.
@@ -112,11 +112,11 @@ Please put the text input box for send message and list for message history, sen
 ```
 
 ###Login Page
-![login](https://github.com/denisbasyuk41/pubnub/blob/master/doc/login.png)
+![login](https://github.com/alexbily/pubnub/blob/master/doc/login.png)
          
 
 ### Chatting Room Page 
-![chatting](https://github.com/denisbasyuk41/pubnub/blob/master/doc/chat.png)
+![chatting](https://github.com/alexbily/pubnub/blob/master/doc/chat.png)
             
 ##Step 5: Push Server
 Please create the push_server.yml with content in the config directory of the project.
@@ -125,7 +125,7 @@ Host: localhost
 Port: 8082
 ```
 
-Next, you need to import the [push server](https://github.com/denisbasyuk41/pubnub/tree/master/push_server) to the project from the git.
+Next, you need to import the [push server](https://github.com/alexbily/pubnub/tree/master/push_server) to the project from the git.
 
 ## Application architecture and server communications 
 When application is initialized, rails server subscribes to pubnub channel in the active state for the whole lifetime of the app.
@@ -134,7 +134,7 @@ When message is sent by user to the rails app, server-side code calls pubnub SDK
 When new message arrives via the pubnub channel to the railss app it forms http request to the push server and push server sends updates to all active clients
 List of active users is formed from the list of active websocket connections.
 
-![structure](https://github.com/denisbasyuk41/pubnub/blob/master/doc/structure.png)
+![structure](https://github.com/alexbily/pubnub/blob/master/doc/structure.png)
 
 # How to run this demo from git
 1. install rvm

@@ -1,0 +1,4 @@
+= form_for :user, url: '/login', html: {class: 'signin-form'} do |f|
+  %h2.form-signin-heading Sign in
+  = f.text_field :nickname, class: 'form-control', placeholder: 'Nickname', autofocus: true
+  %button.btn.btn-lg.btn-primary.btn-block#login_button Sign in

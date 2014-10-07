@@ -1,0 +1,18 @@
+= hidden_field_tag :nickname, @name
+.well.col-md-3
+  .panel.panel-primary
+    .panel-heading
+      %h3.panel-title Online
+    .panel-body
+      %ul.list-group#online_users
+.well.col-md-9
+  %ul.nav.nav-tabs#channel_tabs
+    %li.active
+      %a{href: '#main_channel', role: 'tab', data: {toggle: 'tab'} } Main Channel
+  .tab_content
+    %ul.tab-pane.list-group.message_list#main_channel
+    .form-horizontal.col-md-12
+      .form-group.col-md-10
+        %input#chat_input.form-control
+      %button#submit.btn.btn-primary.col-md-2
+        send
